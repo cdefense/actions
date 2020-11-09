@@ -1,0 +1,32 @@
+name: "CloudDefense"
+description: "Check your Java application for vulnerabilties using CloudDefense"
+author: "PG"
+branding:
+  icon: "alert-triangle"
+  color: "yellow"
+inputs:
+  command:
+    description: "Which CloudDefense command to run, defaults to scan"
+    default: scan
+    required: true
+  project-name:
+    description: "Name of the application"
+    required: true
+  api-key:
+    description: "API key to record the scan"
+    required: true
+  path:
+    description: "Path to the project"
+    default: .
+runs:
+  using: "docker"
+  image: "docker://cdefense/cdefense:java"
+  args:
+  - ${{ inputs.command }}
+  - -q
+  - --project-name
+  - ${{ inputs.project-name }}
+  - --api-key
+  - ${{ inputs.api-key }}
+  - --path
+  - ${{ inputs.path }} 
