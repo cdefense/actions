@@ -25,6 +25,7 @@ runs:
     SCAN_LANG: node
   args:
   - ${{ inputs.command }}
+  - -q
   - --project-name
   - ${{ inputs.project-name }}
   - --api-key
