@@ -1,0 +1,21 @@
+name: "CloudDefense"
+description: "Check your Node application for vulnerabilties using CloudDefense"
+author: "PG"
+branding:
+  icon: "alert-triangle"
+  color: "yellow"
+inputs:
+  command:
+    description: "Which CloudDefense command to run, defaults to scan"
+    default: scan
+  args:
+    description: "Additional arguments to pass to CloudDefense"
+runs:
+  using: "docker"
+  image: "docker://cdefense/cdefense:node"
+  env:
+    SCAN_LANG: node
+  args:
+  - cdefense
+  - ${{ inputs.command }}
+  - ${{ inputs.args }} 
