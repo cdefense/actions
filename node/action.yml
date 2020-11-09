@@ -8,8 +8,12 @@ inputs:
   command:
     description: "Which CloudDefense command to run, defaults to scan"
     default: scan
-  args:
-    description: "Additional arguments to pass to CloudDefense"
+  project-name:
+    description: "Name of the application"
+  api-key:
+    description: "API key to record the scan"
+  path:
+    description: "Path to the project"
 runs:
   using: "docker"
   image: "docker://cdefense/cdefense:node"
@@ -17,4 +21,6 @@ runs:
     SCAN_LANG: node
   args:
   - ${{ inputs.command }}
-  - ${{ inputs.args }} 
+  - ${{ inputs.project-name }} 
+  - ${{ inputs.api-key }} 
+  - ${{ inputs.path }} 
