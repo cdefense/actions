@@ -16,6 +16,5 @@ runs:
   env:
     SCAN_LANG: node
   args:
-  - cdefense
   - ${{ inputs.command }}
   - ${{ inputs.args }} 
