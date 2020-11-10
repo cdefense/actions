@@ -4,15 +4,14 @@ A set of [GitHub Actions](https://github.com/features/actions) for using [CloudD
 vulnerabilities in your GitHub projects. A different action is required depending on which language or build tool
 you are using. We currently support:
 
-* [DotNet](dotnet)
-* [Golang](golang)
 * [Java-Maven](java)
-* [Node](node)
+* [Node.js](node)
 * [PHP](php)
 * [Python](python)
-* [Container](container)
+* [DotNet](dotnet)
+* [Golang](golang)
 
-Here's an example of using one of the Actions, in this case to test a Node.js project:
+An example of using one of the Actions, in this case to test a Node.js project:
 
 ```yaml
 name: Example workflow using CloudDefense
@@ -28,6 +27,5 @@ jobs:
         project-name: <Name of your project>
         api-key: <Your CD API-KEY>
 ```
-
 
 See the individual Actions linked above for per-language instructions.
