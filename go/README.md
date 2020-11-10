@@ -14,8 +14,9 @@ jobs:
     - uses: actions/checkout@master
     - name: Run CloudDefense to check for vulnerabilities
       uses: snyk/actions/go@main
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        project-name: <Name of the project>
+        api-key: <Your API-KEY>
 ```
 
 The CloudDefense Golang Action has properties which are passed to the underlying image. These are
