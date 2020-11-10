@@ -1,3 +1,5 @@
+# CloudDefense GitHub Actions
+
 A set of [GitHub Actions](https://github.com/features/actions) for using [CloudDefense](https://clouddefense.ai) to check for
 vulnerabilities in your GitHub projects. A different action is required depending on which language or build tool
 you are using. We currently support:
