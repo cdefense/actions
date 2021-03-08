@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Run CloudDefense to check for vulnerabilities
-      uses: snyk/actions/dotnet@master
+      uses: cdefense/actions/dotnet@master
       with:
         project-name: <Name of the project>
         api-key: <Your API-KEY>
