@@ -1,4 +1,4 @@
-name: "CloudDefense"
+name: "Cloud Defense"
 description: "Check your Node application for vulnerabilties using CloudDefense"
 author: "PG"
 branding:
@@ -6,10 +6,10 @@ branding:
   color: "yellow"
 inputs:
   command:
-    description: "Which CloudDefense command to run, defaults to scan"
-    default: scan
+    description: "Which Cloud Defense command to run, defaults to sca"
+    default: sca
   args:
-    description: "Additional arguments to pass to CloudDefense"
+    description: "Additional arguments to pass to Cloud Defense"
 runs:
   using: "docker"
   image: "docker://cdefense/cdefense:node"
