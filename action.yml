@@ -1,5 +1,5 @@
 name: "Cloud Defense"
-description: "Check your Node application for vulnerabilties using CloudDefense"
+description: "Check your application for vulnerabilties using CloudDefense"
 author: "PG"
 branding:
   icon: "alert-triangle"
